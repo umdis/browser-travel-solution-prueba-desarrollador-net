@@ -1,0 +1,6 @@
+@BrowserTravel.MilesCarRental.WebAPI_HostAddress = http://localhost:5113
+
+GET {{BrowserTravel.MilesCarRental.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
