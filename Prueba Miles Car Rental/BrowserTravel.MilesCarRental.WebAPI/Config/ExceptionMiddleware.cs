@@ -45,7 +45,7 @@ public class ExceptionMiddleware
         return httpContext.Response.WriteAsJsonAsync(new
         {
             Statuscode = StatusCodes.Status409Conflict,
-            Message = "¡Se produjo una operación inesperada!",
+            ex.Message,
             ex.StackTrace
         });
     }

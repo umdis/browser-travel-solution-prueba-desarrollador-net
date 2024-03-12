@@ -8,19 +8,19 @@ namespace BrowserTravel.MilesCarRental.WebAPI.Controllers.V1
 {
     [Route("api/V1/[controller]")]
     [ApiController]
-    public class LocationsController : ControllerBase
+    public class VehiclesController : ControllerBase
     {
-        private readonly IGenericRepository<Locality> _localityRepository;
+        private readonly IGenericRepository<Vehicle> _vehicleRepository;
 
-        public LocationsController(IGenericRepository<Locality> localityRepository)
+        public VehiclesController(IGenericRepository<Vehicle> vehicleRepository)
         {
-            _localityRepository = localityRepository;
+            _vehicleRepository = vehicleRepository;
         }
 
         [HttpGet]
-        public async Task<ActionResult<ICollection<LocalityDto>>> Get()
+        public async Task<ActionResult<ICollection<VehicleDto>>> Get()
         {
-            var obj = await _localityRepository.GetAllAsync();
+            var obj = await _vehicleRepository.GetAllAsync();
             return Ok(obj.Maps());
         }
     }
