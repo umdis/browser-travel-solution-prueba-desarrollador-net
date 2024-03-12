@@ -17,4 +17,7 @@ public class Rent : BaseEntity
 
     [ForeignKey("IdVehicle")]
     public Vehicle? Vehicle { get; set; }
+
+    [Required]
+    public bool State { get; set; }
 }
